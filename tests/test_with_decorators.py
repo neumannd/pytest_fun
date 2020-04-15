@@ -9,6 +9,7 @@ import pytest
 
 # ~~~~ test for equality ~~~~
 # @pytest.mark.skip(reason="test function not implemented yet")
+@pytest.mark.use_parameterize
 @pytest.mark.parametrize("input_args,expected",
                          [([3, 2], 5),
                           ([3, 1], 4),
@@ -23,6 +24,7 @@ def test_add_true(input_args, expected):
 
 # ~~~~ test for inequality ~~~~
 # @pytest.mark.skip(reason="test function not implemented yet")
+@pytest.mark.use_parameterize
 @pytest.mark.parametrize("input_args,expected",
                          [([3, 2], 4),
                           ([3, 1], 2),
@@ -38,6 +40,7 @@ def test_add_false(input_args, expected):
 
 # ~~~~ test different permutations of input arguments ~~~~
 # @pytest.mark.skip(reason="test function not implemented yet")
+@pytest.mark.use_parameterize
 @pytest.mark.parametrize("a", [0, 1, 2, 3, 103])
 @pytest.mark.parametrize("b", [2, 3, 5, 10, 24, 105, 212])
 def test_add_permutated(a, b):
@@ -48,6 +51,7 @@ def test_add_permutated(a, b):
 
 # ~~~~ give names to the tests by parameterize ~~~~
 # @pytest.mark.skip(reason="test function not implemented yet")
+@pytest.mark.use_parameterize
 @pytest.mark.parametrize("input_args,expected",
                          [([3, 2], 5),
                           ([107, 243], 350),
