@@ -1,5 +1,4 @@
 from __future__ import with_statement
-import versioneer
 from setuptools import setup, find_packages
 
 
@@ -23,7 +22,7 @@ reqs = [line.strip() for line in open('requirements.txt')]
 
 setup(
     name="pytest-fun",
-    version=versioneer.get_version(),
+    version=0.2,
     description="Pytest Training",
     long_description=readme(),
     license='Apache License 2.0',
@@ -42,5 +41,4 @@ setup(
         'Programming Language :: Python',
         'Topic :: Scientific/Engineering'
     ],
-    cmdclass=versioneer.get_cmdclass(),
 )
