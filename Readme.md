@@ -43,6 +43,17 @@ $ pytest
 * see `pytest.ini` in root directory for usage of some possible control parameters
 
 
+# Further Reading
+
+## Using mock modules
+
+Sometimes you have a database or an external service which is not available for your test environment.
+In theses cases you can use mock modules to fake the responses of the database/service to return an expected value.
+The database/service don't need to be available to run the test code.
+
+* https://docs.pytest.org/en/latest/monkeypatch.html
+* https://docs.python.org/dev/library/unittest.mock.html
+
 # Contributors:
 
 * @am-kaiser
