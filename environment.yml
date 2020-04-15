@@ -1,0 +1,7 @@
+name: pytest_fun
+channels:
+- defaults
+dependencies:
+- numpy
+# tests
+- pytest
