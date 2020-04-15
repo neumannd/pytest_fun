@@ -26,6 +26,6 @@ install:
   # Packages for testing
   - conda install pytest
   # Install WPS
-  - python setup.py install
+  - python setup.py develop
 script:
   - pytest
