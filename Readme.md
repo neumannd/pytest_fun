@@ -32,6 +32,17 @@ Run all tests with pytest:
 $ pytest
 ```
 
+# Examples for projects using pytest
+
+## IOOS Compliance Checker
+
+* url: https://github.com/ioos/compliance-checker
+* tests directory: [compliance_checker/tests](https://github.com/ioos/compliance-checker/tree/master/compliance_checker/tests)
+* one testing file per module
+* pytest decorators: does only use marks
+* see `pytest.ini` in root directory for usage of some possible control parameters
+
+
 # Contributors:
 
 * @am-kaiser
