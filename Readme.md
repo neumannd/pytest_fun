@@ -4,7 +4,7 @@
 
 This GitHub repository is meant for collecting `pytest` example code to introduce colleagues to `pytest`.
 
-Pytest is a python based testing framework, whichis used to write and execute test code. You can write code to test anything like database , API. But in the industry pytest is mainly used to write tests for APIs. 
+Pytest is a python based testing framework, which is used to write and execute test code. You can write code to test anything like database , API. But in the industry pytest is mainly used to write tests for APIs. 
 
 # Advantages
 
@@ -14,6 +14,7 @@ Pytest is a python based testing framework, whichis used to write and execute te
 * Pytest allows us to run a subset of the entire test suite.
 * Pytest is free and open source.
 * Because of its simple syntax, pytest is very easy to start with
+* Pytest  can  be  used  with  most  existing  test  suites, like nosetest, python unittest, doctest
 
 # Installation
 
