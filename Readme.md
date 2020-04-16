@@ -4,6 +4,18 @@
 
 This GitHub repository is meant for collecting `pytest` example code to introduce colleagues to `pytest`.
 
+Pytest is a python based testing framework, which is used to write and execute test code. You can write code to test anything like database , API. But in the industry pytest is mainly used to write tests for APIs. 
+
+# Advantages
+
+* Pytest can run multiple tests in parallel, which reduces the execution time of the test suite.
+* Pytest has its own way to detect the test file and test functions automatically, if not mentioned explicitly.
+* Pytest allows us to skip a subset of the tests during execution.
+* Pytest allows us to run a subset of the entire test suite.
+* Pytest is free and open source.
+* Because of its simple syntax, pytest is very easy to start with
+* Pytest  can  be  used  with  most  existing  test  suites, like nosetest, python unittest, doctest.
+
 # Installation
 
 Get sources from GitHub:
@@ -31,6 +43,36 @@ Run all tests with pytest:
 ```
 $ pytest
 ```
+This will run all the filenames starting with test_ and the filenames ending with _test in that folder and subfolders under that folder. 
+
+To run tests only from a specific file, we can use:
+```
+$ pytest tests\test_simple.py
+```
+# Pytest command line options
+
+```
+$ pytest -x           # stop after first failure
+$ pytest --maxfail=2  # stop after two failures
+$ pytest -v           # verbose
+```
+see also: https://gist.github.com/kwmiebach/3fd49612ef7a52b5ce3a
+
+# Create an html output
+
+Add pytest-html to conda environment:
+```
+$ conda install pytest-html
+```
+Run pytest and create html output:
+```
+$ pytest --html=report.html
+```
+
+# Reading material
+
+* https://docs.pytest.org/en/latest/
+* https://www.tutorialspoint.com/pytest/pytest_tutorial.pdf
 
 # Examples for projects using pytest
 
