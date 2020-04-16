@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 # ~~~~ test write_int_to_file ~~~~
-@pytest.mark.use_fixtures
+@pytest.mark.io_tests
 def test_write_int_to_file():
     # define a temporary directory
     tmpdir = Path('/tmp')
@@ -38,6 +38,7 @@ def get_tmpdir():
 
 # use the fixture
 @pytest.mark.use_fixtures
+@pytest.mark.io_tests
 def test_write_int_to_file_with_own_fixture(get_tmpdir):
     file_path = get_tmpdir / 'my_file.txt'
     write_int_to_file(5, file_path)
@@ -53,6 +54,7 @@ def test_write_int_to_file_with_own_fixture(get_tmpdir):
 # A list of all available fixtures is provided here:
 #    https://docs.pytest.org/en/latest/fixture.html
 @pytest.mark.use_fixtures
+@pytest.mark.io_tests
 def test_write_int_to_file_with_predefined_fixture(tmpdir):
     # `tmpdir` is alreay a `Path` object but it caused strange errors.
     # Therefore, we do the `Path(str(...))`.
@@ -70,6 +72,7 @@ def test_write_int_to_file_with_predefined_fixture(tmpdir):
 # line output of programms can be tested. For details on `capfd` see:
 #    https://docs.pytest.org/en/latest/reference.html#std:fixture-capfd
 @pytest.mark.use_fixtures
+@pytest.mark.io_tests
 def test_output(capfd):
     print('Hello World!')
     captured = capfd.readouterr()

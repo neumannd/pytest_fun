@@ -8,12 +8,14 @@ import pytest
 
 
 # ~~~~ skip a test ~~~~
+@pytest.mark.skipped_and_xfailing_tests
 @pytest.mark.skip(reason="test not fully implemented/functional yet")
 def test__this_is_an_extensive_test_that_is_not_fully_implemented_yet():
     assert add(3, 2) == 5
 
 
 # ~~~~ mark a test as failing ~~~~
+@pytest.mark.skipped_and_xfailing_tests
 @pytest.mark.xfail(reason="conversion of string arguments into int/float " +
                           "not implemented yet")
 def test__this_test_will_fail_and_we_know_it():
@@ -21,6 +23,7 @@ def test__this_test_will_fail_and_we_know_it():
 
 
 # ~~~~ mark a test as failing but it does not fail ~~~~
+@pytest.mark.skipped_and_xfailing_tests
 @pytest.mark.xfail(reason="should fail but does not ...")
 def test__this_test_is_marked_as_failing_but_does_not_fail():
     assert add(3, 2) == 5
