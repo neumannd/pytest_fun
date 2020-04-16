@@ -8,6 +8,7 @@ def readme():
 
 
 def pip_requirements(fname='requirements.txt'):
+    reqs = []
     with open(fname, 'r') as f:
         for line in f:
             line = line.strip()
@@ -17,11 +18,8 @@ def pip_requirements(fname='requirements.txt'):
     return reqs
 
 
-reqs = [line.strip() for line in open('requirements.txt')]
-
-
 setup(
-    name="pytest-fun",
+    name="pytest_fun",
     version=0.2,
     description="Pytest Training",
     long_description=readme(),
