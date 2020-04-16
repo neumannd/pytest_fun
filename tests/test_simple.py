@@ -4,7 +4,7 @@ from pytest_fun.funs import add, sub, square
 def test_add():
     assert add(1, 1) == 2
     assert add(3, 2) == 5
-    assert add(2, 3) == 6
+    assert add(2, 3) == 5
     assert add(2.5, 3.3) == 5.8
 
 

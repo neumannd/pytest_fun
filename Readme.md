@@ -14,7 +14,7 @@ Pytest is a python based testing framework, which is used to write and execute t
 * Pytest allows us to run a subset of the entire test suite.
 * Pytest is free and open source.
 * Because of its simple syntax, pytest is very easy to start with
-* Pytest  can  be  used  with  most  existing  test  suites, like nosetest, python unittest, doctest.
+* Pytest  can  be  used  with  most  existing  test  suites, like nosetest, python unittest, doctest
 
 # Installation
 
@@ -68,6 +68,9 @@ Run pytest and create html output:
 ```
 $ pytest --html=report.html
 ```
+# conftest.py: sharing fixture functions
+
+If during implementing your tests you realize that you want to use a fixture function from multiple test files you can move it to a conftest.py file. You don’t need to import the fixture you want to use in a test, it automatically gets discovered by pytest. The discovery of fixture functions starts at test classes, then test modules, then conftest.py files and finally builtin and third party plugins.
 
 # Reading material
 
