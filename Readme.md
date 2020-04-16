@@ -14,7 +14,7 @@ Pytest is a python based testing framework, which is used to write and execute t
 * Pytest allows us to run a subset of the entire test suite.
 * Pytest is free and open source.
 * Because of its simple syntax, pytest is very easy to start with
-* Pytest  can  be  used  with  most  existing  test  suites, like nosetest, python unittest, doctest
+* Pytest  can  be  used  with  most  existing  test  suites, like nosetest, python unittest, doctest.
 
 # Installation
 
