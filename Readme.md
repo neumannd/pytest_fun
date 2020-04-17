@@ -82,6 +82,7 @@ markers =
         use_fixtures: tests are performed in which pytest.fixtures are used
         use_parameterize: tests are performed in which pytest.mark.parameterize is used
         skipped_and_xfailing_tests: test that are marked to be skipped or marked to fail (`xfail`)
+        io_tests: perform only tests that are related to I/O (file and command line)
 ```
 
 Example for marking a functions with a marker:
@@ -97,7 +98,7 @@ def test_write_int_to_file():
     assert file_path.read_text() == '5'
 ```
 
-To performed only tests marked by marked `use_fixtures` (example) do:
+To perform only tests marked by marked `use_fixtures` (example) do:
 
 ``` bash
 pytest -m use_fixtures
