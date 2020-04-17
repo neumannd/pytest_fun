@@ -54,7 +54,7 @@ def test_add_false(input_args, expected):
                          [([3, 2], 5),
                           ([3, 1], 4),
                           pytest.param([2, 2], 3, marks=pytest.mark.xfail)])
-def test_add_true(input_args, expected):
+def test_add_true_xfail(input_args, expected):
     assert add(input_args[0], input_args[1]) == expected
 
 
