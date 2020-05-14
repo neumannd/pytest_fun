@@ -55,6 +55,8 @@ $ pytest tests\test_simple.py
 $ pytest -x           # stop after first failure
 $ pytest --maxfail=2  # stop after two failures
 $ pytest -v           # verbose
+$ pytest -m use_fixtures # run only specific tests marked with the tag
+                         # `use_fixtures` (details below in "pytest markers")
 ```
 see also: https://gist.github.com/kwmiebach/3fd49612ef7a52b5ce3a
 
@@ -68,6 +70,45 @@ Run pytest and create html output:
 ```
 $ pytest --html=report.html
 ```
+
+# pytest markers
+
+We can use pytest **markers** to select only a subset of tests to run. This is useful if some tests only work in specific environments (with database access; unter certain operation systems). Markers are defined in the `pytest.ini` file. Then, functions can be individually marked with them.
+
+Example for definition of markers in `pytest.ini`:
+
+```
+markers =
+        use_fixtures: tests are performed in which pytest.fixtures are used
+        use_parameterize: tests are performed in which pytest.mark.parameterize is used
+        skipped_and_xfailing_tests: test that are marked to be skipped or marked to fail (`xfail`)
+```
+
+Example for marking a functions with a marker:
+
+``` python
+@pytest.mark.use_fixtures
+def test_write_int_to_file():
+    # define a temporary directory
+    tmpdir = Path('/tmp')
+
+    file_path = tmpdir / 'my_file.txt'
+    write_int_to_file(5, file_path)
+    assert file_path.read_text() == '5'
+```
+
+To performed only tests marked by marked `use_fixtures` (example) do:
+
+``` bash
+pytest -m use_fixtures
+```
+
+To perform all tests except those marked by `use_fixtures` (example) do:
+
+``` bash
+pytest -m "not use_fixtures"
+```
+
 
 # Reading material
 
